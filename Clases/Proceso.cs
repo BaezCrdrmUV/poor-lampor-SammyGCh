@@ -23,7 +23,8 @@ namespace PoorLamport.Clases
 
             if (mensaje.Tiempo <= this.Tiempo)
             {
-                this.Tiempo++;
+                int tiempoMaximo = Math.Max(mensaje.Tiempo, Tiempo);
+                Tiempo = tiempoMaximo + 1;
                 MensajesRecibidos.Add(mensaje);
 
                 mensajeFueRecibido = true;
