@@ -37,9 +37,6 @@ namespace PoorLamport
             mensajesProceso2.ItemsSource = Procesos[1].MensajesRecibidos;
             mensajesProceso3.ItemsSource = Procesos[2].MensajesRecibidos;
 
-            //contenedorProceso1.DataContext = Procesos[0];
-            //tiempoProceso2.Content = Procesos[1].Tiempo;
-            //tiempoProceso3.Content = Procesos[2].Tiempo;
             tiempoProceso1.Text = Procesos[0].Tiempo.ToString();
             tiempoProceso2.Text = Procesos[1].Tiempo.ToString();
             tiempoProceso3.Text = Procesos[2].Tiempo.ToString();
@@ -62,7 +59,6 @@ namespace PoorLamport
                             Contenido = $"Proceso {procesoOrigen.Id}: {mensajeText.Text}"
                         };
 
-                        //procesoDestino.RecibirMensaje(mensajeAEnviar);
                         procesoOrigen.EnviarMensaje(mensajeAEnviar, procesoDestino);
 
                         ActualizarVentana();
@@ -87,7 +83,7 @@ namespace PoorLamport
         {
             procesoOrigenCombobox.SelectedItem = null;
             procesoDestinoCombobox.SelectedItem = null;
-            tiempoMensajeText.Text = "";
+            tiempoMensajeText.Text = "0";
             mensajeText.Text = "";
             tiempoProceso1.Text = Procesos[0].Tiempo.ToString();
             tiempoProceso2.Text = Procesos[1].Tiempo.ToString();

@@ -23,8 +23,6 @@ namespace PoorLamport.Clases
 
             if (mensaje.Tiempo <= this.Tiempo)
             {
-                //int tiempoMaximo = Math.Max(mensaje.Tiempo, this.Tiempo);
-                //this.Tiempo = tiempoMaximo;
                 this.Tiempo++;
                 MensajesRecibidos.Add(mensaje);
 
@@ -50,7 +48,6 @@ namespace PoorLamport.Clases
                         MensajesRecibidos.Add(mensajeEnEspera);
                         MensajesEnEspera.Remove(mensajeEnEspera);
 
-                        //Hay que verificar si se necesita
                         break;
                     }
                 }
